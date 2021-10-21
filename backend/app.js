@@ -1,11 +1,15 @@
 // import d'express
 const express = require('express');
 
-//import de mongoDB
+//import des variables d'environnement
+const dotenv = require("dotenv");
+dotenv.config();
+
+//import de mongoose pour se connecter à mongoDB
 const mongoose = require('mongoose');
 
 // connexion à mongoDB
-mongoose.connect('mongodb+srv://user_fedronic_felix:hottakes@cluster0.jtf3h.mongodb.net/Hottakes?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
