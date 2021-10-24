@@ -8,6 +8,9 @@ dotenv.config();
 //import de mongoose pour se connecter à mongoDB
 const mongoose = require('mongoose');
 
+//import de la route user
+const userRoutes = require('./routes/user');
+
 // connexion à mongoDB
 mongoose.connect(process.env.MONGO_DB_URI, {
         useNewUrlParser: true,
@@ -36,11 +39,7 @@ app.use((req, res, next) => {
 //middleware global, transforme le corps de la requete en objet javascript utilisable
 app.use(express.json());
 
-
-app.use((req, res) => {
-    res.json({
-        message: 'Votre requête a bien été reçue !'
-    });
-});
+//middleware User
+app.use('/api/auth', userRoutes);
 
 module.exports = app;
