@@ -8,6 +8,9 @@ dotenv.config();
 //import de mongoose pour se connecter à mongoDB
 const mongoose = require('mongoose');
 
+// import path, donne accès au chemin de notre système de fichier
+const path = require('path');
+
 //import de la route user
 const userRoutes = require('./routes/user');
 
@@ -39,7 +42,11 @@ app.use((req, res, next) => {
 //middleware global, transforme le corps de la requete en objet javascript utilisable
 app.use(express.json());
 
-//middleware User
+// indique à Express qu'il faut gerer la ressource images de manière statique à chaque requête reçue vers la route /images
+// __dirname = nom du dossier dans lequel on va se trouver
+app.use('/images', express.static(path.join(__dirname, 'images')));
+
+//routes User
 app.use('/api/auth', userRoutes);
 
 module.exports = app;
