@@ -11,10 +11,10 @@ const sauceSchema = mongoose.Schema({
     mainPepper: { type: String, required: true },
     imageUrl: { type: String, required: true },
     heat: { type: Number, required: true },
-    likes: { type: Number, default: 0, required: false },
-    dislikes: { type: Number, default: 0, required: false },
-    usersLiked: { type: [String], required: false },
-    usersDisliked: { type: [String], required: false },
+    likes: { type: Number, default: 0 },
+    dislikes: { type: Number, default: 0 },
+    usersLiked: { type: Array, default: [] },
+    usersDisliked: { type: Array, default: [] },
 });
 
 // export du schema en tant que modèle Mongoose, appelé "Sauce" et avec le modèle d'une sauce en paramètre

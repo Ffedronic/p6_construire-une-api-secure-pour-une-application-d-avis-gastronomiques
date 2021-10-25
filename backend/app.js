@@ -11,8 +11,11 @@ const mongoose = require('mongoose');
 // import path, donne accès au chemin de notre système de fichier
 const path = require('path');
 
-//import de la route user
+//import du router user
 const userRoutes = require('./routes/user');
+
+//import du router sauce
+const sauceRoutes = require('./routes/sauce');
 
 // connexion à mongoDB
 mongoose.connect(process.env.MONGO_DB_URI, {
@@ -46,7 +49,9 @@ app.use(express.json());
 // __dirname = nom du dossier dans lequel on va se trouver
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
-//routes User
+//routes user
 app.use('/api/auth', userRoutes);
 
+//routes sauce
+app.use('/api/sauces', sauceRoutes);
 module.exports = app;
