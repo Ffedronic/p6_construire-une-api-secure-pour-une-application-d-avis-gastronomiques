@@ -17,6 +17,9 @@ const userRoutes = require('./routes/user');
 //import du router sauce
 const sauceRoutes = require('./routes/sauce');
 
+//import du routeur like
+const likeRoute = require('./routes/like');
+
 // connexion à mongoDB
 mongoose.connect(process.env.MONGO_DB_URI, {
         useNewUrlParser: true,
@@ -54,6 +57,9 @@ app.use('/api/auth', userRoutes);
 
 //routes sauce
 app.use('/api/sauces', sauceRoutes);
+
+//route like
+app.use('/api/sauces', likeRoute);
 
 //export du module app
 module.exports = app;
