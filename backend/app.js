@@ -54,4 +54,6 @@ app.use('/api/auth', userRoutes);
 
 //routes sauce
 app.use('/api/sauces', sauceRoutes);
+
+//export du module app
 module.exports = app;
