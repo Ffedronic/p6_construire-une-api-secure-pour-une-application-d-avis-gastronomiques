@@ -1,4 +1,4 @@
-// import mongoose, facilite interaction avec base de donnée
+// import mongoose, facilite interaction avec base de données
 const mongoose = require('mongoose');
 
 // création schema de données d'une Sauce, contient champs souhaités pour chaque Sauce

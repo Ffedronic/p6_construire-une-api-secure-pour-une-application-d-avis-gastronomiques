@@ -11,7 +11,6 @@ passwordSchema
     .has().uppercase() // contient au moins une lettre majuscule
     .has().lowercase() // contient au moins une lettre minuscule
     .has().digits(2) // contient au moins 2 chiffres
-    .has().not().symbols() // ne contient pas de symboles
     .has().not().spaces() // ne contient pas d'espaces
     .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklister ces valeurs
 

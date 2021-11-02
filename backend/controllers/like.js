@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     const like = req.body.like;
     const userId = req.body.userId;
 
-    // on va chercher la sauce selectionnée
+    //recherche de la sauce selectionnée
     Sauce.findOne({ _id: req.params.id })
         .then((sauce) => {
             if (req.body.userId) {
