@@ -11,6 +11,8 @@ const mongoose = require('mongoose');
 // import path, donne accès au chemin de notre système de fichier
 const path = require('path');
 
+// import helmet
+const helmet = require('helmet');
 //import du router user
 const userRoutes = require('./routes/user');
 
@@ -30,6 +32,9 @@ mongoose.connect(process.env.MONGO_DB_URI, {
 
 //création de l'application express
 const app = express();
+
+//middleware helmet
+app.use(helmet())
 
 // middleware pour supprimer la sécurité CORS
 app.use((req, res, next) => {

@@ -17,7 +17,7 @@ const userCtrl = require('../controllers/user');
 router.post('/signup', emailCheckRegex, passwordValidator, userCtrl.signup);
 
 //route pour la connexion
-router.post('/login', userCtrl.login);
+router.post('/login', emailCheckRegex, passwordValidator, userCtrl.login);
 
 //export du router
 module.exports = router;
