@@ -16,15 +16,15 @@ Creation of a secure API for an application dedicated to the evaluation of spicy
 ## Installation and Usage ##
 ### Front-End Application:
 For the frontend application, here are the dependancies you need to install:
-- NodeJS 12.14 or 14.0.
-- Angular CLI 7.0.2.
-- node-sass : make sure to use the corresponding version to NodeJS. For Noe 14.0 for instance, you need node-sass in version 4.14+.
-On Windows, these installations require to use PowerShell in administrator mode.
-Then, clone this repo (https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6), run `npm install`, and run `npm install  --save-dev run-script-os`.
-To start the frontend application, run `npm start`. This should both run the local server and launch your browser.
-If your browser fails to  launch, or shows a 404 error, navigate your browser to http://localhost:8080.
-The app should reload automatically when you make a change to a file.
-Use `Ctrl+C` in the terminal to stop the local server.
+- NodeJS 12.14 or 14.0,
+- Angular CLI 7.0.2,
+- node-sass : make sure to use the corresponding version to NodeJS. For Noe 14.0 for instance, you need node-sass in version 4.14+.  
+On Windows, these installations require to use PowerShell in administrator mode.  
+Then, clone this repo (https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6), run `npm install`, and run `npm install  --save-dev run-script-os`.  
+To start the frontend application, run `npm start`. This should both run the local server and launch your browser.  
+If your browser fails to  launch, or shows a 404 error, navigate your browser to http://localhost:8080.  
+The app should reload automatically when you make a change to a file.  
+Use `Ctrl+C` in the terminal to stop the local server.  
 ### Back-End Application:
 For the backend application, here are the dependancies you need to install:
 - "bcrypt 5.0.1": a library to help you hash passwords,
@@ -35,12 +35,12 @@ For the backend application, here are the dependancies you need to install:
 - "mongoose-unique-validator" 3.0.0: mongoose-unique-validator is a plugin which adds pre-save validation for unique fields within a Mongoose schema,
 - "multer 1.4.3": Multer is a node.js middleware which is primarily used for uploading files,
 - "password-validator 5.2.0": validates password according to flexible and intuitive specifications,
-- "path 0.12.7": the path module provides utilities for working with file and directory paths.
-- "fs": The fs module enables interacting with the file system.
-- "helmet 4.6.0": ,
-Then, run `nodemon server` at the rood folder containing the backend application.
-*The port 3000* will be used by server to listen the requests. 
-The server should reload automatically when you make a change to a file.
+- "path 0.12.7": the path module provides utilities for working with file and directory paths,
+- "fs": The fs module enables interacting with the file system,
+- "helmet 4.6.0".  
+Then, run `nodemon server` at the rood folder containing the backend application.  
+*The port 3000* will be used by server to listen the requests.  
+The server should reload automatically when you make a change to a file.  
 Use `Ctrl+C` in the terminal to stop the server.
 
 ***
