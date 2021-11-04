@@ -40,8 +40,8 @@ For the backend application, here are the dependancies you need to install:
 - "fs": The fs module enables interacting with the file system,
 - "helmet 4.6.0".  
 
-Then, run `nodemon server` at the rood folder containing the backend application.  
-*The port 3000* will be used by server to listen the requests.  
+Then, run `nodemon server` at the root folder containing the backend application.  
+*The port "3000"* will be used by the server to listen the frontend application's requests.  
 The server should reload automatically when you make a change to a file.  
 Use `Ctrl+C` in the terminal to stop the server.
 
