@@ -7,6 +7,10 @@ const bcrypt = require('bcrypt');
 //import jswebtoken
 const jwt = require('jsonwebtoken');
 
+//import des variables d'environnement
+const dotenv = require("dotenv");
+dotenv.config();
+
 //controller pour l'inscription
 exports.signup = (req,res, next) => {
     bcrypt.hash(req.body.password, 10)
@@ -38,7 +42,7 @@ exports.login = (req, res, next) => {
                         userId: user._id,
                         token: jwt.sign(
                             { userId: user._id },
-                            'HOTTAKES',
+                            process.env.JWT_TOKEN_KEY,
                             { expiresIn: '24h' }
                         )
                     });
